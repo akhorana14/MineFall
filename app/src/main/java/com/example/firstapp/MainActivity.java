@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onStartTap(View view) {
-        view.setVisibility(View.INVISIBLE);
-        Game instanceGame = new Game();
-        instanceGame.start();
+        view.setVisibility(View.INVISIBLE); // Sets the button as invisible
+        Game instanceGame = new Game(); //Creates a new instance of the Game class
+        instanceGame.start(); //Starts the game
     }
 
 }

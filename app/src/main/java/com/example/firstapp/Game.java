@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Game extends AppCompatActivity {
 
     int score;
-
+    PlayerSprite player;
 
     public Game()
     {
@@ -36,6 +36,8 @@ public class Game extends AppCompatActivity {
     {
         //graphical changes to game starting
     }
+
+
 
 
 }
