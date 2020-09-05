@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="tapStatement">Tap To Start</string>
+
+</resources>
