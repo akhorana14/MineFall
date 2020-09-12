@@ -19,26 +19,36 @@ public class MainActivity extends AppCompatActivity {
     public void startScreen()
     {
 
-
-        int opacity = 100;
-        while(!startIsPressed)
-        {
-            if(opacity == 100)
-            {
-                for(opacity = 100; opacity > 0; opacity--)
+        Runnable startAnimation = new Runnable() {
+            @Override
+            public void run() {
+                if(startIsPressed)
                 {
-                    start.setAlpha(opacity);
+                    start.setAlpha(0);
+                    return;
+                }
+                else
+                {
+                    if(start.getAlpha() == 1)
+                    {
+                        for(int i = 1; i > 0; i-=.01)
+                        {
+                            start.setAlpha(i);
+                        }
+                    }
+                    else if(start.getAlpha() == 0)
+                    {
+                        for(int i = 0; i < 1; i+=.01)
+                        {
+                            start.setAlpha(i);
+                        }
+                    }
                 }
             }
-            else if(opacity == 0)
-            {
-                for(opacity = 0; opacity < 100; opacity++)
-                {
-                    start.setAlpha(opacity);
-                }
-            }
+        };
 
-        }
+
+        startAnimation.run();
 
     }
 
